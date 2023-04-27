@@ -45,7 +45,7 @@ struct node *deleteNode(struct node *root, int key) {
         root->right = deleteNode(root->right,key);
     }
     else{
-        if(root->left == NULL && root->right == NULL){
+        if(root->left == NULL && root->right == NULL){      // check the node's left and right NULL
             root = NULL;
         }else if(root->right != NULL){
             root->key = rightReplacer(root);
